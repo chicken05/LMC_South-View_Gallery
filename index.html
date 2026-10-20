@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>South-View · An Illustrated History</title>
+    <meta
+      name="description"
+      content="A scroll-driven illustrated history of South-View Cemetery, Atlanta's oldest African American–controlled burial ground, from 1886 to today."
+    />
+    <meta name="theme-color" content="#f2ebdc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,300..600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#timeline">Skip to the timeline</a>
+
+    <!-- The illustrated skyline (decorative; all content is in the page text) -->
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="scene__grain"></div>
+    </div>
+
+    <!-- Timeline indicator: current year, period, progress -->
+    <nav class="hud" id="hud" aria-label="Timeline"></nav>
+
+    <main class="story" id="story">
+      <noscript>
+        <p class="noscript">This illustrated timeline needs JavaScript. Please enable it to explore South-View’s history.</p>
+      </noscript>
+    </main>
+
+    <!-- Content first (edit this one), then the engine. Order matters. -->
+    <script src="content/timeline.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/pencil.js"></script>
+    <script src="assets/js/landmarks.js"></script>
+    <script src="assets/js/scenery.js"></script>
+    <script src="assets/js/scene.js"></script>
+    <script src="assets/js/story.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
