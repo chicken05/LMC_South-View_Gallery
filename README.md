@@ -9,41 +9,48 @@ Built for LMC 3403 (Georgia Tech, Fall 2026). Plain HTML, CSS and JavaScript: no
 - **Quickest:** double-click `index.html`.
 - **Local server (closer to the hosted version):** run `python3 -m http.server` in this folder, then open <http://localhost:8000>.
 
-## Edit the timeline (`content/timeline.js`)
+## Add or edit a timeline entry
 
-This is the only file you need to touch. Each entry uses the same fields as our research template:
+All timeline entries are in `content/timeline.js`. Open that file in a text editor.
+
+1. Find an existing entry and copy the whole entry, from its opening `{` to its closing `},`. Paste the copy beside the other entries.
+2. Replace the person's name, year, headline, story and connection to South-View. Add the names and website addresses of your sources.
+3. On the line labeled `id`, give the new entry its own short link name, such as `new-person`. Use lowercase letters and dashes, with no spaces.
+4. To add a picture, put it in `assets/images/archive/`. In the copied entry, replace the old picture's filename with yours. Add a short description of what the picture shows, a caption, and the name and website of its owner. Use the picture's width and height in pixels (shown in its file properties). If there is no picture yet, leave its address empty (`''`); the page will show an “archival image needed” box.
+5. Keep the existing commas, quotation marks and brackets in place. Write the year as a number, without quotation marks. Save the file, refresh the website, and check the new entry's date, wording, picture and links. The page puts entries in year order for you.
+
+To edit an entry, find its headline and change its text. To remove one, delete the whole entry, from `{` through the closing `},`.
+
+The example below shows which lines to replace:
 
 ```js
 {
-  id: 'ludie-clay-andrews',       // unique; also a link anchor: index.html#ludie-clay-andrews
-  year: 1920,                     // where it sits on the timeline, and the skyline's year
-  date: '1914 – 1920',            // the date shown on the card
+  id: 'ludie-clay-andrews',       // give each entry its own short link name
+  year: 1920,                     // year used to put entries in order
+  date: '1914 – 1920',            // date readers see on the card
   person: 'Ludie Clay Andrews',
   title: 'Opening doors for Black nurses',
   description: '…',
   whyItBelongs: '…',              // shown as "Connection to South-View"
   media: {
     type: 'Historical photograph',
-    src: 'assets/images/archive/ludie-clay-andrews.jpg',  // '' = "archival image needed" box
-    width: 356, height: 462,      // the image's pixel size (prevents layout jumps)
+    src: 'assets/images/archive/ludie-clay-andrews.jpg',  // replace this picture's filename
+    width: 356, height: 462,      // picture size, found in its file properties
     alt: '…', caption: '…', credit: '…', creditUrl: '…',
-    suggestion: '…'               // shown in the placeholder box when src is ''
+    suggestion: '…'               // describe a picture to find if none is available yet
   },
   sources: [{ label: 'Historical background', url: '…' }],
-  focus: 'grady',                 // optional: the landmark the skyline pans to
-  status: 'researched',           // 'researched' | 'draft' | 'placeholder'
-  note: '…'                       // internal note, never shown on the page
+  focus: 'grady',                 // which landmark the skyline moves toward
+  status: 'researched',           // use 'draft' for work that still needs review
+  note: '…'                       // a private note for the team; readers will not see it
 },
 ```
 
-- **To add an entry,** copy a block, edit it, and save. Entries sort by `year` automatically.
-- **To remove an entry,** delete its block.
-- **To add an image,** put a JPG (about 800–1000px on the long side) in `assets/images/archive/` and point `src` at it.
-- **Focus targets:** `railroad`, `capitol`, `kimball-house`, `auc`, `grady`, `sweet-auburn`, `ebenezer`, `fulton-county-stadium`, `turner-field`, `georgia-dome`, `downtown`, `midtown`, `skyline`, `south-view`.
-- **Section intros, the hero text and the ending** are also in this file (`site` and `periods`).
-- **Before publishing,** set `showStatusLabels: false` to hide the Draft/Placeholder tags.
+For pictures, a JPG about 800–1000 pixels along its longer side is usually enough. Keep the copied skyline landmark unless another location fits better. The available names are `railroad`, `capitol`, `kimball-house`, `auc`, `grady`, `sweet-auburn`, `ebenezer`, `fulton-county-stadium`, `turner-field`, `georgia-dome`, `downtown`, `midtown`, `skyline`, and `south-view`.
 
-If something looks wrong, open the browser console. The site warns about entries missing a year or title, duplicate ids, unknown `focus` values, and missing images.
+The opening text, section introductions and ending are in the same file, above the entries. Before publishing, change `showStatusLabels: true` to `showStatusLabels: false` to hide the Draft and Placeholder tags.
+
+If an entry does not appear, check that it has a year and headline, its own short link name, and the same punctuation as the entry you copied.
 
 ## Content status
 

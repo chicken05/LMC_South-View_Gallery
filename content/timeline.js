@@ -2,16 +2,25 @@
    SOUTH-VIEW TIMELINE — CONTENT FILE
    --------------------------------------------------------------------------
    This is the only file you need to edit to add, remove, or change timeline
-   entries. No coding knowledge needed — just keep the punctuation intact:
-   every value is in "quotes", and every entry ends with a comma.
+   entries. Keep the existing commas, quotation marks and brackets in place.
+   Write years as numbers, without quotation marks.
 
-   ADD AN ENTRY      copy one { ... } block in `entries`, paste it anywhere
-                     in the list and change the text. Entries are sorted by
-                     `year` automatically, and the skyline follows the year.
-   REMOVE AN ENTRY   delete its whole { ... }, block.
-   ADD AN IMAGE      put the file in assets/images/archive/ and set
-                     media.src to its path. Leave src empty ("") to show a
-                     labeled "archival image needed" placeholder instead.
+   ADD AN ENTRY
+   1. Find a complete entry below, from its opening { to its closing },.
+      Copy it and paste the copy beside the other entries.
+   2. Replace the name, year, headline, story and connection to South-View.
+      Replace the source names and website addresses with your sources.
+   3. Give the copy its own short link name on the line labeled id, such as
+      'new-person'. Use lowercase letters and dashes, with no spaces.
+   4. For a picture, put the image in assets/images/archive/. In the copied
+      entry, replace the old picture's filename with yours. Add a short
+      picture description, caption and the name and website of its owner.
+      If you have no picture yet, leave the picture's address empty ('').
+      The page will show an "archival image needed" box.
+   5. Save this file and refresh the website. Check the date, wording,
+      picture and links. The page puts entries in year order for you.
+
+   REMOVE AN ENTRY   delete its whole entry, from { through the closing },.
 
    Entry fields (they mirror our research template):
      id            unique, lowercase-with-dashes; also the link anchor

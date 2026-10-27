@@ -164,7 +164,7 @@
       let side = 0;
       for (let d = Math.ceil((y0 + 1) / 10) * 10; d < y1; d += 10) {
         const t = (d - y0) / years;
-        g.appendChild(h('span', { class: 'gap__decade gap__decade--' + (side++ % 2 ? 'r' : 'l'), 'data-year': d, style: 'top:' + (t * 100).toFixed(1) + '%', text: d + 's' }));
+        g.appendChild(h('span', { class: 'gap__decade gap__decade--' + (side++ % 2 ? 'r' : 'l'), 'data-year': d, style: '--position:' + (t * 100).toFixed(1) + '%', text: d + 's' }));
       }
       return g;
     }
@@ -181,7 +181,17 @@
       });
       art.appendChild(h('div', { class: 'entry__year', 'aria-hidden': 'true', text: String(e.date && /^\d{4}$/.test(e.date) ? e.date : Math.floor(e.year)) }));
       art.appendChild(h('div', { class: 'entry__media reveal' }, [this.media(e)]));
-      const sources = (e.sources || []).filter((s) => s && s.url);
+      // Keep one link per destination in an entry, retaining every source's role.
+      const destinations = new Map();
+      (e.sources || []).filter((s) => s && s.url).forEach((s) => {
+        if (!destinations.has(s.url)) destinations.set(s.url, { url: s.url, labels: [] });
+        const labels = destinations.get(s.url).labels;
+        const label = s.label || 'Source';
+        if (!labels.includes(label)) labels.push(label);
+      });
+      const m = e.media || {};
+      if (m.src && m.credit && destinations.has(m.creditUrl)) destinations.get(m.creditUrl).labels.push('Image credit');
+      const sources = Array.from(destinations.values());
       const body = h('div', { class: 'entry__body reveal' }, [
         h('div', { class: 'card' }, [
           h('p', { class: 'entry__eyebrow' }, [h('span', { class: 'entry__date', text: e.date || String(e.year) }), e.person ? h('span', { class: 'entry__person', text: e.person }) : null]),
@@ -197,7 +207,7 @@
             ? h(
                 'ul',
                 { class: 'entry__sources', 'aria-label': 'Sources' },
-                sources.map((s) => h('li', null, [link(s.label || 'Source', s.url)]))
+                sources.map((s) => h('li', null, [link(s.labels.join(' · '), s.url)]))
               )
             : null,
           this.statusChip(status),
@@ -237,7 +247,11 @@
       const caption = h('figcaption', { class: 'photo__caption' }, [
         meta,
         m.caption ? ' ' + m.caption + ' ' : ' ',
-        m.credit ? (m.creditUrl ? link(m.credit, m.creditUrl, 'photo__credit') : h('span', { class: 'photo__credit', text: m.credit })) : null,
+        m.credit
+          ? (m.creditUrl && !(e.sources || []).some((s) => s && s.url === m.creditUrl)
+              ? link(m.credit, m.creditUrl, 'photo__credit')
+              : h('span', { class: 'photo__credit', text: m.credit }))
+          : null,
       ]);
       const style = m.width ? 'max-width:' + Math.round(Math.max(m.width * 1.4, 300)) + 'px' : null;
       return h('figure', { class: 'photo', style }, [h('div', { class: 'photo__frame' }, [img]), caption]);
@@ -297,7 +311,9 @@
         track.appendChild(a);
       });
       this.entries.forEach((e) => {
-        const t = h('a', { class: 'hud__tick', href: '#' + e.id, 'aria-label': (e.date || e.year) + ': ' + e.title, title: (e.date || e.year) + ' — ' + e.title });
+        const t = h('a', { class: 'hud__tick', href: '#' + e.id, 'aria-label': e.year + ': ' + e.title }, [
+          h('span', { class: 'hud__tick-year', 'aria-hidden': 'true', text: String(e.year) }),
+        ]);
         t.addEventListener('click', (ev) => {
           ev.preventDefault();
           this.jumpTo(e.id);
@@ -316,8 +332,10 @@
         if (this.onMotionToggle) this.onMotionToggle(off);
       });
       this.hud.motion = motion;
+      this.hud.track = track;
+      this.hud.rail = h('div', { class: 'hud__rail' }, [track]);
       hud.appendChild(h('div', { class: 'hud__now' }, [this.hud.year, this.hud.period]));
-      hud.appendChild(h('div', { class: 'hud__rail' }, [track]));
+      hud.appendChild(this.hud.rail);
       hud.appendChild(motion);
     }
 
@@ -424,11 +442,26 @@
         s.el.style.setProperty('--b', (b * 100).toFixed(2) + '%');
         s.range = [a, b];
       });
-      this.hud.ticks.forEach((t) => {
+      let previous = 0;
+      let smallestStep = 1;
+      this.hud.ticks.forEach((t, i) => {
         const anchor = this.anchors.find((x) => x.el.id === t.e.id);
         const p = anchor ? anchor.y / max : 0;
         t.el.style.setProperty('--p', (p * 100).toFixed(2) + '%');
+        if (i && p > previous) smallestStep = Math.min(smallestStep, p - previous);
+        previous = p;
       });
+      // On phones, keep the proportional rail and give each labeled dot room
+      // for a separate 44px touch target. Only this small rail scrolls sideways.
+      this.hudEl.style.setProperty('--mobile-track-width', Math.ceil(45 / smallestStep) + 'px');
+      const { rail, track } = this.hud;
+      this.hud.mobileRail = window.innerWidth < 900 ? {
+        start: track.getBoundingClientRect().left - rail.getBoundingClientRect().left + rail.scrollLeft,
+        width: track.clientWidth,
+        viewport: rail.clientWidth,
+        max: Math.max(0, rail.scrollWidth - rail.clientWidth),
+      } : null;
+      this.lastHud.railProgress = null;
     }
 
     /* ----------------------------------------------------------- mapping */
@@ -550,6 +583,13 @@
         this.hudEl.style.setProperty('--progress', (prog * 100).toFixed(2) + '%');
         last.prog = prog;
       }
+      // Follow page scrolling on mobile; leave manual rail swipes alone
+      // while the page stays still. Layout changes also refresh the position.
+      const rail = this.hud.mobileRail;
+      if (rail && prog !== last.railProgress) {
+        this.hud.rail.scrollLeft = U.clamp(rail.start + prog * rail.width - rail.viewport / 2, 0, rail.max);
+        last.railProgress = prog;
+      }
       const accent = U.rgba(this.scene.accent(this.year));
       if (accent !== last.accent) {
         document.documentElement.style.setProperty('--accent', accent);
@@ -578,7 +618,8 @@
         const media = el.firstElementChild && el.firstElementChild.nextElementSibling;
         const year = el.firstElementChild;
         if (media) media.style.translate = '0 ' + (rel * -36).toFixed(1) + 'px';
-        if (year) year.style.translate = '0 ' + (rel * 70).toFixed(1) + 'px';
+        // Keep desktop years inside the space above their cards as they move.
+        if (year) year.style.translate = '0 ' + (rel * (window.innerWidth >= 900 ? 10 : 70)).toFixed(1) + 'px';
       });
     }
 
