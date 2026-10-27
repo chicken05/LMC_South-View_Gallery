@@ -747,7 +747,6 @@ html.is-dusk .entry__year {
 }
 .hud__tick {
   position: absolute;
-  z-index: 1;
   top: 0;
   left: var(--p);
   width: 44px;
@@ -759,6 +758,7 @@ html.is-dusk .entry__year {
 .hud__tick::before {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 5px;
   left: 15px;
   width: 14px;

@@ -55,8 +55,9 @@ If an entry does not appear, check that it has a year and headline, its own shor
 ## Content status
 
 - **Researched (team):** Turner, Grant, Herndon, Andrews and Dobbs, all from *Research pre-civil rights*.
-- **Draft:** the section intros and the Civil Rights and Post–Civil Rights entries (Smith-Robinson, Hamilton, King, Aaron, King Sr., Russell, Lewis, the 2026 National Register listing). Each has source links, but the team should verify and rewrite them in our own words.
-- **Placeholder:** one 1950s slot, plus every entry without an image.
+- **Civil Rights research:** Borders, McPheeters, Smith-Robinson, Lewis at Selma, Hamilton, Bond, Aaron’s Atlanta debut and King Sr.’s church leadership are based on *South_View_Civil_Rights_Research_Word_Style.pdf*. Each includes the listed archival image or document, historical sources and evidence of a connection to South-View. The existing later entries for Aaron, King Sr. and Lewis remain in place.
+- **Draft:** the section intros, King Jr.’s 1968 funeral and the Post–Civil Rights entries (Aaron’s 1974 record, King Sr.’s 1984 burial, Russell, Lewis’s 2020 burial and the 2026 National Register listing) still need team review.
+- **Images:** the eight Civil Rights research entries have local archival images. McPheeters’s image is the first newspaper scan in the listed clippings document; the original is faint. Smith-Robinson’s image is a still at approximately 00:50 in the listed May 23, 1966 WSB-TV newsfilm. Archive watermarks are retained. Entries outside this research still show placeholders where images are missing.
 - **Image rights:** the Grant portrait's date and reproduction permission still need checking, as noted in our research. The other photos are credited to their source archives; confirm permission before a public launch.
 
 ## Host it and embed it in Wix
