@@ -876,7 +876,7 @@ window.SOUTHVIEW_CONTENT = {
         'South-View’s story has been carried forward by the people who care for it. These projects bring that story to new audiences online, and they belong to South-View to keep building on.',
       media: {
         type: 'Photograph',
-        src: 'georgia-tech-2026.jpeg',
+        src: 'assets/images/archive/georgia-tech-2026.jpeg',
         alt: '', caption: '', credit: '', creditUrl: '',
         suggestion: 'A photo of the Georgia Tech Campus'
       },
