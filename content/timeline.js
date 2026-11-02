@@ -52,7 +52,7 @@
 window.SOUTHVIEW_CONTENT = {
   site: {
     title: 'South-View',
-    kicker: "Atlanta's oldest African American–controlled burial ground",
+    kicker: "Atlanta's oldest African American–chartered burial ground",
     dek:
       'Founded in 1886 by Black Atlantans who had been made to use the back gates of the city’s cemeteries, South-View holds the story of Black Atlanta, from Reconstruction through the Civil Rights Movement to today. Scroll down to move through time and watch the city they helped build rise on the horizon.',
     startYear: 1860,
