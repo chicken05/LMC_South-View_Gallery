@@ -843,5 +843,26 @@ window.SOUTHVIEW_CONTENT = {
       focus: 'south-view',
       status: 'draft',
     },
+     {
+      id: 'georgia-tech-lmc-3403',
+      year: 2026,
+      date: 'Fall 2026',
+      person: 'Georgia Tech students, LMC 3403',
+      title: 'Expanding South-View’s impact',
+      description:
+        'In fall 2026, students in Georgia Tech’s LMC 3403 class created projects for South-View that share its history in new ways. This illustrated timeline is one of them. Each project was made to be handed to South-View, so the people who lead it can keep using and updating it after the semester ends.',
+      whyItBelongs:
+        'South-View’s story has been carried forward by the people who care for it. These projects bring that story to new audiences online, and they belong to South-View to keep building on.',
+      media: {
+        type: 'Photograph',
+        src: 'georgia-tech-2026.jpeg',
+        alt: '', caption: '', credit: '', creditUrl: '',
+        suggestion: 'A photo of the Georgia Tech Campus'
+      },
+      sources: [],
+      focus: 'midtown',
+      status: 'draft',
+      note: '',
+    },
   ],
 };
