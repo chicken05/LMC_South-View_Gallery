@@ -675,5 +675,173 @@ window.SOUTHVIEW_CONTENT = {
       focus: 'skyline',
       status: 'draft',
     },
+    {
+      id: 'maynard-jackson-elected-1973',
+      year: 1973,
+      date: 'October 16, 1973',
+      period: 'legacy',
+      person: 'Maynard H. Jackson Jr.',
+      title: 'Atlanta elects its first Black mayor',
+      description:
+        'On October 16, 1973, Maynard Jackson defeated incumbent Sam Massell in a runoff election to become Atlanta’s first Black mayor and the first Black mayor of a major Southern city. His administration later expanded opportunities for minority-owned businesses to win city contracts and helped reshape Atlanta’s airport.',
+      whyItBelongs:
+        'Jackson’s grandfather, John Wesley Dobbs, was a voting-rights organizer buried at South-View. The election marked a new chapter in the political empowerment that Dobbs and other Black Atlantans had worked to make possible.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'An archival photograph of Maynard Jackson on election night in 1973. Check Atlanta History Center image permissions.',
+      },
+      sources: [
+        { label: 'Maynard Jackson elected — Today in Georgia History', url: 'https://www.todayingeorgiahistory.org/tih-georgia-day/maynard-jackson-elected/' },
+        { label: 'Maynard Jackson biography — New Georgia Encyclopedia', url: 'https://www.georgiaencyclopedia.org/articles/government-politics/maynard-jackson-1938-2003/' },
+        { label: 'John Wesley Dobbs at South-View — Georgia preservation newsletter', url: 'https://dlg.usg.edu/record/dlg_ggpd_i-ga-bn200-ph5-bp1-br4-b10-s2-belec-p-btext' },
+      ],
+      focus: 'downtown',
+      status: 'draft',
+    },
+    {
+      id: 'alberta-williams-king-1974',
+      year: 1974,
+      date: 'July 3, 1974',
+      period: 'legacy',
+      person: 'Alberta Williams King',
+      title: 'A community mourns Alberta Williams King',
+      description:
+        'Alberta Williams King was the longtime organist and choir director at Ebenezer Baptist Church and the mother of Dr. Martin Luther King Jr. She was killed while playing the organ during a church service on June 30, 1974. Family, church members and the wider Atlanta community gathered for her funeral on July 3.',
+      whyItBelongs:
+        'Alberta Williams King was buried at South-View Cemetery. Her burial linked the cemetery to another chapter of the King family’s history; her husband, Martin Luther King Sr., was buried there ten years later.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'A photograph of Alberta Williams King or her July 1974 funeral from an archive, with permission and credit.',
+      },
+      sources: [
+        { label: 'Alberta Williams King obituary and burial history — Atlanta Journal-Constitution', url: 'https://www.ajc.com/uatl/the-death-of-alberta-williams-king-mother-of-martin-luther-king-jr/IIDVT4RJDNFYZFRGSA5SFQJ4RQ/' },
+        { label: 'July 3, 1974 funeral archive — Digital Library of Georgia', url: 'https://dlg.usg.edu/record/geh_byd_4202' },
+        { label: 'South-View historical marker — Georgia Historical Society', url: 'https://www.georgiahistory.com/ghmi_marker_updated/south-view-cemetery/' },
+      ],
+      focus: 'ebenezer',
+      status: 'draft',
+    },
+    {
+      id: 'albert-h-watts-president-1977',
+      year: 1977,
+      date: '1977',
+      period: 'legacy',
+      person: 'Albert H. Watts',
+      title: 'A founder’s family carries South-View forward',
+      description:
+        'Albert H. Watts, a grandson of South-View co-founder Albert Watts, became president-treasurer of the cemetery association in 1977. He had begun working at South-View as a young man, digging graves, and had served in several roles before taking the top leadership position. He remained president-treasurer until his death in 2001.',
+      whyItBelongs:
+        'Watts’s leadership illustrates how South-View continued as a Black-led, community-serving institution long after its founding in 1886. His family’s involvement helped preserve the cemetery across generations.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'A portrait of Albert H. Watts or an archival photograph of South-View’s entrance, with permission and credit.',
+      },
+      sources: [
+        { label: 'History of the Watts family — South-View Cemetery Association', url: 'https://southviewcemetery.com/our-history/' },
+        { label: 'South-View family leadership — Georgia Tech Building Memories', url: 'https://leading-edge.iac.gatech.edu/building-memories/southview-cemetery/' },
+        { label: 'South-View preservation history — Georgia preservation newsletter', url: 'https://dlg.usg.edu/record/dlg_ggpd_i-ga-bn200-ph5-bp1-br4-b10-s2-belec-p-btext' },
+      ],
+      focus: 'south-view',
+      status: 'draft',
+    },
+    {
+      id: 'henry-o-flipper-reburial-1978',
+      year: 1978,
+      date: 'February 11, 1978',
+      period: 'legacy',
+      person: 'Henry Ossian Flipper',
+      title: 'Henry O. Flipper receives military honors',
+      description:
+        'Henry Ossian Flipper became the first Black graduate of the U.S. Military Academy at West Point in 1877. After a court-martial and dismissal from the Army, he spent decades seeking to clear his name. The Army corrected his discharge record in 1976, and on February 11, 1978, he was reinterred with full military honors in his hometown of Thomasville, Georgia.',
+      whyItBelongs:
+        'Flipper had been buried at South-View after his death in 1940. His reburial in 1978 connects South-View’s history to the long struggle for recognition of Black military service.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'An archival portrait of Henry O. Flipper in military uniform, or the Thomasville historical marker.',
+      },
+      sources: [
+        { label: 'Flipper burial history — South-View Cemetery Association', url: 'https://southviewcemetery.com/our-history/' },
+        { label: 'First Black Graduate of West Point marker — Georgia Historical Society', url: 'https://www.georgiahistory.com/ghmi_marker_updated/first-black-graduate-of-west-point/' },
+        { label: 'Henry O. Flipper biography — National Park Service', url: 'https://home.nps.gov/people/henryflipper.htm' },
+      ],
+      focus: 'south-view',
+      status: 'draft',
+    },
+    {
+      id: 'benjamin-mays-south-view-1984',
+      year: 1984,
+      date: 'March 28, 1984',
+      period: 'legacy',
+      person: 'Benjamin E. Mays',
+      title: 'Remembering Morehouse mentor Benjamin E. Mays',
+      description:
+        'Benjamin E. Mays, who led Morehouse College from 1940 to 1967, died on March 28, 1984. An educator, minister and outspoken critic of segregation, he encouraged generations of students, including Martin Luther King Jr., to pursue leadership and social change.',
+      whyItBelongs:
+        'Mays was initially buried at South-View Cemetery before his remains were later moved to the Morehouse College campus. His story connects South-View to Atlanta’s historically Black colleges and the educators who shaped the Civil Rights Movement.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'A historical portrait of Benjamin E. Mays, preferably from Morehouse or another credited archival collection.',
+      },
+      sources: [
+        { label: 'Benjamin E. Mays — Stanford King Institute', url: 'https://kinginstitute.stanford.edu/mays-benjamin-elijah' },
+        { label: 'Benjamin Mays biography — New Georgia Encyclopedia', url: 'https://www.georgiaencyclopedia.org/articles/education/benjamin-mays-ca-1894-1984/' },
+        { label: 'Mays burial and relocation — South-View Cemetery Association', url: 'https://southviewcemetery.com/our-history/' },
+      ],
+      focus: 'auc',
+      status: 'draft',
+    },
+    {
+      id: 'lillian-miles-lewis-2013',
+      year: 2013,
+      date: 'January 7, 2013',
+      period: 'legacy',
+      person: 'Lillian Miles Lewis',
+      title: 'Honoring Lillian Miles Lewis',
+      description:
+        'Lillian Miles Lewis was a librarian, educator and longtime adviser to her husband, civil rights leader and congressman John Lewis. After her death on December 31, 2012, a funeral service honoring her life was held at Ebenezer Baptist Church on January 7, 2013.',
+      whyItBelongs:
+        'Lillian Miles Lewis was interred at South-View Cemetery following the service. Her story highlights the work of women whose contributions to education and civic life supported Atlanta’s continued pursuit of equality.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'A credited portrait of Lillian Miles Lewis or an archival image connected to her work at Atlanta University.',
+      },
+      sources: [
+        { label: 'Original January 2013 funeral program — Digital Library of Georgia', url: 'https://dlg.usg.edu/record/aarl_afpc_lewislillianmiles20130107' },
+        { label: 'Funeral and South-View interment notice — Atlanta Journal-Constitution', url: 'https://www.legacy.com/us/obituaries/atlanta/name/lillian-lewis-obituary?id=24933043' },
+        { label: 'Lillian Lewis papers and career — Atlanta University Center Archives', url: 'https://findingaids.auctr.edu/repositories/2/resources/174' },
+      ],
+      focus: 'ebenezer',
+      status: 'draft',
+    },
+    {
+      id: 'south-view-historical-marker-2016',
+      year: 2016,
+      date: 'April 30, 2016',
+      period: 'legacy',
+      person: 'South-View Cemetery',
+      title: 'A historical marker recognizes South-View',
+      description:
+        'In 2016, the Georgia Historical Society and Historic South-View Preservation Foundation unveiled a historical marker honoring South-View Cemetery. The marker tells how formerly enslaved African Americans founded the cemetery in 1886 in response to discrimination at Atlanta’s segregated burial grounds.',
+      whyItBelongs:
+        'Placed near the cemetery’s main office, the marker publicly recognizes South-View’s founding, its burial traditions and the contributions of generations of Black Atlantans. It was a preservation milestone distinct from the cemetery’s later National Register listing.',
+      media: {
+        type: 'Historical photograph',
+        src: '',
+        suggestion: 'An original photograph of South-View’s Georgia historical marker near the main office.',
+      },
+      sources: [
+        { label: 'April 2016 marker dedication — Georgia Historical Society', url: 'https://www.georgiahistory.com/georgia-historical-society-to-recognize-south-view-cemetery-with-historical-marker-dedication-this-saturday/' },
+        { label: 'Official South-View marker text — Georgia Historical Society', url: 'https://www.georgiahistory.com/ghmi_marker_updated/south-view-cemetery/' },
+        { label: 'South-View historical context — Georgia Tech Building Memories', url: 'https://leading-edge.iac.gatech.edu/building-memories/southview-cemetery/' },
+      ],
+      focus: 'south-view',
+      status: 'draft',
+    },
   ],
 };
