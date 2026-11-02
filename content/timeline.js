@@ -72,7 +72,7 @@ window.SOUTHVIEW_CONTENT = {
     },
     credits: {
       course: 'LMC 3403 · Georgia Tech · Fall 2026',
-      team: '[Team member names]',
+      team: 'Mickey Paulus · Rick Berglund · Sunny Lin · Vaishnavi Manivannan',
       note: 'Prototype. Skyline illustration is an artistic interpretation drawn in code; landmark dates are approximate.',
     },
   },
