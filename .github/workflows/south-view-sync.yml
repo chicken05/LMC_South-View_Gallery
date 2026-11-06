@@ -2,6 +2,8 @@ name: Sync approved South-View entries
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 13 * * *'
 
 permissions:
   contents: write
